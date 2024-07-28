@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root{
+ --sabz-kaleghazi: #5A6D57;
+}
+#root{padding: 0 ;
+}
+.kale_ghaz{
+  background-color: var(--sabz-kaleghazi);
+}
+.root{
+  padding: 0;
+}
