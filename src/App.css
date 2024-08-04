@@ -1,6 +1,21 @@
-@media only screen and (max-width: 1029px) {
-   .div_header{
-    order: 1;
-    
-   }
-  }
+@media only screen and (min-device-width: 1024px) {
+   .header_for_phone{
+      display: flex;
+   } 
+
+   .header_for_pc{
+      display: none;
+   }  
+ }
+ @media only screen and (min-device-width: 540px) {
+   .header_for_phone{
+      height:64 px ;     
+   } 
+ 
+ }
+ html, body {
+   min-width: 344px;
+}
+* {
+   box-sizing: border-box;
+ }
