@@ -1,18 +1,27 @@
 
 import './App.css';
-import './assets/font/index.css'
-import Header from './Components/header/Header';
+import '../assets/font/index.css'
 
-function App() {
+import React from 'react';
+import routes from './router/routes';
+import { BrowserRouter, Routes, Route,  } from 'react-router-dom';
 
 
+const App: React.FC = () => {
   return (
-    <>
-      <div className='h-screen '>
-        <Header />
-      </div>
-    </>
+    <BrowserRouter>
+      <Routes>
+        {routes.map((route) => (
+          <Route
+            key={route.path}
+            path={route.path}
+            element={<route.element />}
+          />
+        ))}
+        {/* <Route path="*" element={<NotFound />} /> */}
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;

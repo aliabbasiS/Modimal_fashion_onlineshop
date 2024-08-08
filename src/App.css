@@ -1,4 +1,4 @@
-@media only screen and (min-device-width: 1024px) {
+@media only screen and (min-device-width: 500px) {
    .header_for_phone{
       display: flex;
    } 
@@ -13,6 +13,13 @@
    } 
  
  }
+
+
+
+
+
+
+ 
  html, body {
    min-width: 344px;
 }

@@ -1,25 +1,22 @@
 import Hamburger from "hamburger-react";
 
+import { useState } from "react";
 function Header() {
-
+  const[toggle,settoggle]=useState('false')
     return (
       <header className="w-full ">
        {/* top green text */}
        <div className=" w-full tracking-widest h-full	 leading-3 text-center text-white py-2 text-sm  kale_ghaz ">Enjoy Free Shipping On All Orders</div>
        
        
-       {/* topheader.logo.menu searchbar for display under  1024px */}
+        
+       {/* topheader.logo.menu searchbar for display under  500px */}
        <div className="header_for_phone h-20 lg:hidden flex  justify-between px-5">
        <div className="div_header1 flex items-center ">
           
           
-       <Hamburger size={24} onToggle={toggled => {
-  if (toggled) {
-     
-  } else {
-     // close a menu
-  }
-}} />
+       <div onClick={()=>{settoggle(!toggle),console.log(toggle)}}><Hamburger size={24} /></div>
+       {toggle}
           <button><img className="w-6 mx-2" src="/public/headericons/profile.png" alt="" /></button>
           </div>
        
@@ -43,7 +40,7 @@ function Header() {
 
 
 
-       {/* topheader.logo.menu searchbar for display over 1024px */}
+       {/* topheader.logo.menu searchbar for display over 500px */}
        <div className="lg:h-28 hidden  header_for_pc   h-20 bg-white px-10    py-4 lg:flex  justify-between ">
         {/* logo */}
         <div className="lg:flex-1 lg:flex justify-start items-center ">
